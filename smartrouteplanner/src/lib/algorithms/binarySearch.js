@@ -98,7 +98,8 @@ export const runBinarySearch = (graphService, startId, endId, preference, budget
       queueSize: 0,
       currentCost: best ? best.cost : 0,
       realDistance: best ? best.distance : 0,
-      pathFound: !!best
+      pathFound: !!best,
+      efficiency: best ? (100 - (step / candidates.length) * 100) : 0
     },
     explanation: best 
       ? `Found optimal route within budget through binary search!` 
