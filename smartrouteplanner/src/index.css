@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* INVERTED THEME: Dark base, Light cards */
+    --background: 60 5% 7%;     /* #111110 (Was Light) */
+    --foreground: 60 8% 95%;    /* #F5F5F0 (Was Dark) */
+    
+    --card: 60 8% 98%;          /* White/Off-white (Was Dark) */
+    --card-foreground: 60 5% 7%;/* #111110 (Was Light) */
+    
+    --popover: 60 8% 98%;
+    --popover-foreground: 60 5% 7%;
+    
+    --primary: 73 100% 62%;     /* #CAFF3C (Neon Green) */
+    --primary-foreground: 60 5% 7%;
+    
+    --secondary: 60 5% 12%;     /* #1A1A1A (Was Light Sidebar) */
+    --secondary-foreground: 60 8% 80%; /* Light text */
+    
+    --muted: 60 5% 20%;
+    --muted-foreground: 60 5% 60%;
+    
+    --accent: 73 100% 62%;      /* Keep Neon Green as Accent */
+    --accent-foreground: 60 5% 7%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 0 0% 100% / 10%;
+    --input: 0 0% 100% / 10%;
+    --ring: 73 100% 62%;
+    
+    --radius: 1.25rem;
+
+    /* Custom Tokens Inverted */
+    --bg-app: #111110;
+    --bg-sidebar: #1A1A1A;
+    --bg-card-panel: #FFFFFF;
+    
+    /* Algorithm Colors (Adjusted for dark background) */
+    --node-unvisited: #FFFFFF;  /* Inverted from dark to white */
+    --node-queue: #F59E0B;
+    --node-processing: #FB923C;
+    --node-finalized: #6B7280;
+    --node-path: #CAFF3C;
+    --node-start: #22C55E;
+    --node-end: #EF4444;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+h1, h2, h3, h4, h5, h6, .font-display {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.shadow-neon {
+  box-shadow: 0 0 20px rgba(202, 255, 60, 0.3);
+}
+
+.bg-glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}

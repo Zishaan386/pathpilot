@@ -1,0 +1,71 @@
+{
+  "nodes": [
+    {"id": "mg_road", "name": "MG Road", "coordinates": {"lat": 12.9750, "lng": 77.6060}, "type": "landmark"},
+    {"id": "brigade_road", "name": "Brigade Road", "coordinates": {"lat": 12.9650, "lng": 77.6150}, "type": "landmark"},
+    {"id": "cubbon_park", "name": "Cubbon Park", "coordinates": {"lat": 12.9900, "lng": 77.5850}, "type": "landmark"},
+    {"id": "majestic", "name": "Majestic", "coordinates": {"lat": 12.9760, "lng": 77.5400}, "type": "transit"},
+    
+    {"id": "ulsoor", "name": "Ulsoor", "coordinates": {"lat": 13.0000, "lng": 77.6400}, "type": "residential"},
+    {"id": "indiranagar", "name": "Indiranagar", "coordinates": {"lat": 12.9800, "lng": 77.6800}, "type": "residential"},
+    {"id": "domlur", "name": "Domlur", "coordinates": {"lat": 12.9400, "lng": 77.6600}, "type": "commercial"},
+    {"id": "koramangala", "name": "Koramangala", "coordinates": {"lat": 12.9100, "lng": 77.6300}, "type": "residential"},
+    {"id": "richmond_town", "name": "Richmond Town", "coordinates": {"lat": 12.9400, "lng": 77.5900}, "type": "residential"},
+    {"id": "jayanagar", "name": "Jayanagar", "coordinates": {"lat": 12.9000, "lng": 77.5600}, "type": "residential"},
+    
+    {"id": "whitefield", "name": "Whitefield", "coordinates": {"lat": 12.9700, "lng": 77.8500}, "type": "commercial"},
+    {"id": "marathahalli", "name": "Marathahalli", "coordinates": {"lat": 12.9400, "lng": 77.7800}, "type": "commercial"},
+    {"id": "electronic_city", "name": "Electronic City", "coordinates": {"lat": 12.7800, "lng": 77.7200}, "type": "commercial"},
+    {"id": "hsr_layout", "name": "HSR Layout", "coordinates": {"lat": 12.8800, "lng": 77.6700}, "type": "residential"},
+    {"id": "btm_layout", "name": "BTM Layout", "coordinates": {"lat": 12.8900, "lng": 77.6100}, "type": "residential"},
+    
+    {"id": "hebbal", "name": "Hebbal", "coordinates": {"lat": 13.1000, "lng": 77.5950}, "type": "transit"},
+    {"id": "rt_nagar", "name": "RT Nagar", "coordinates": {"lat": 13.0600, "lng": 77.5800}, "type": "residential"},
+    {"id": "malleshwaram", "name": "Malleshwaram", "coordinates": {"lat": 13.0200, "lng": 77.5300}, "type": "residential"},
+    {"id": "rajajinagar", "name": "Rajajinagar", "coordinates": {"lat": 12.9900, "lng": 77.5000}, "type": "residential"},
+    {"id": "yeshwanthpur", "name": "Yeshwanthpur", "coordinates": {"lat": 13.0500, "lng": 77.5100}, "type": "transit"},
+    
+    {"id": "frazer_town", "name": "Frazer Town", "coordinates": {"lat": 13.0200, "lng": 77.6200}, "type": "residential"},
+    {"id": "kalyan_nagar", "name": "Kalyan Nagar", "coordinates": {"lat": 13.0700, "lng": 77.6600}, "type": "residential"},
+    {"id": "banaswadi", "name": "Banaswadi", "coordinates": {"lat": 13.0400, "lng": 77.6700}, "type": "residential"},
+    {"id": "kammanahalli", "name": "Kammanahalli", "coordinates": {"lat": 13.0500, "lng": 77.6500}, "type": "residential"},
+    {"id": "cv_raman_nagar", "name": "CV Raman Nagar", "coordinates": {"lat": 12.9900, "lng": 77.7200}, "type": "residential"}
+  ],
+  "edges": [
+    {"id": "e1", "from": "mg_road", "to": "brigade_road", "distance": 1.5, "baseTime": 8, "roadType": "local_street", "name": "Brigade Link"},
+    {"id": "e2", "from": "mg_road", "to": "cubbon_park", "distance": 2.2, "baseTime": 10, "roadType": "main_road", "name": "Park Boulevard"},
+    {"id": "e3", "from": "cubbon_park", "to": "majestic", "distance": 4.5, "baseTime": 18, "roadType": "main_road", "name": "Metro corridor"},
+    {"id": "e4", "from": "mg_road", "to": "ulsoor", "distance": 3.8, "baseTime": 15, "roadType": "main_road", "name": "Lakeside Way"},
+    {"id": "e5", "from": "ulsoor", "to": "indiranagar", "distance": 4.5, "baseTime": 18, "roadType": "main_road", "name": "CMH Road"},
+    {"id": "e6", "from": "indiranagar", "to": "domlur", "distance": 3.1, "baseTime": 12, "roadType": "main_road", "name": "100ft Road"},
+    {"id": "e7", "from": "domlur", "to": "koramangala", "distance": 5.8, "baseTime": 22, "roadType": "main_road", "name": "Inner Ring Road"},
+    {"id": "e8", "from": "koramangala", "to": "richmond_town", "distance": 4.5, "baseTime": 15, "roadType": "main_road", "name": "Hosur Road"},
+    {"id": "e9", "from": "richmond_town", "to": "mg_road", "distance": 3.2, "baseTime": 10, "roadType": "main_road", "name": "Residency Road"},
+    
+    {"id": "e10", "from": "indiranagar", "to": "cv_raman_nagar", "distance": 5.5, "baseTime": 20, "roadType": "main_road", "name": "Old Madras Road"},
+    {"id": "e11", "from": "cv_raman_nagar", "to": "marathahalli", "distance": 7.2, "baseTime": 25, "roadType": "highway", "name": "HAL Expressway"},
+    {"id": "e12", "from": "marathahalli", "to": "whitefield", "distance": 8.5, "baseTime": 30, "roadType": "highway", "name": "IT Corridor"},
+    {"id": "e13", "from": "whitefield", "to": "electronic_city", "distance": 28.5, "baseTime": 55, "roadType": "highway", "name": "Peripheral Ring Road"},
+    
+    {"id": "e14", "from": "koramangala", "to": "hsr_layout", "distance": 6.2, "baseTime": 22, "roadType": "main_road", "name": "Sarjapur Road"},
+    {"id": "e15", "from": "hsr_layout", "to": "electronic_city", "distance": 12.8, "baseTime": 28, "roadType": "highway", "name": "Elevated Expressway"},
+    {"id": "e16", "from": "hsr_layout", "to": "btm_layout", "distance": 4.5, "baseTime": 15, "roadType": "main_road", "name": "Outer Ring South"},
+    {"id": "e17", "from": "btm_layout", "to": "jayanagar", "distance": 3.8, "baseTime": 14, "roadType": "main_road", "name": "BTM Main"},
+    {"id": "e18", "from": "jayanagar", "to": "richmond_town", "distance": 6.8, "baseTime": 22, "roadType": "main_road", "name": "RV Road"},
+    
+    {"id": "e19", "from": "majestic", "to": "malleshwaram", "distance": 4.5, "baseTime": 16, "roadType": "main_road", "name": "Sampige Road"},
+    {"id": "e20", "from": "malleshwaram", "to": "rajajinagar", "distance": 3.8, "baseTime": 14, "roadType": "main_road", "name": "Chord Road"},
+    {"id": "e21", "from": "rajajinagar", "to": "yeshwanthpur", "distance": 5.1, "baseTime": 20, "roadType": "main_road", "name": "Industrial Hub"},
+    {"id": "e22", "from": "yeshwanthpur", "to": "hebbal", "distance": 10.5, "baseTime": 25, "roadType": "highway", "name": "Airport Road"},
+    {"id": "e23", "from": "hebbal", "to": "rt_nagar", "distance": 3.5, "baseTime": 12, "roadType": "main_road", "name": "Bellary Road"},
+    {"id": "e24", "from": "rt_nagar", "to": "frazer_town", "distance": 5.2, "baseTime": 18, "roadType": "main_road", "name": "Nandi Durga Road"},
+    {"id": "e25", "from": "frazer_town", "to": "mg_road", "distance": 4.1, "baseTime": 15, "roadType": "main_road", "name": "Promenade Road"},
+    
+    {"id": "e26", "from": "hebbal", "to": "kalyan_nagar", "distance": 7.2, "baseTime": 22, "roadType": "highway", "name": "Outer Ring North"},
+    {"id": "e27", "from": "kalyan_nagar", "to": "kammanahalli", "distance": 2.2, "baseTime": 8, "roadType": "local_street", "name": "Kammanahalli Main"},
+    {"id": "e28", "from": "kammanahalli", "to": "banaswadi", "distance": 1.8, "baseTime": 6, "roadType": "local_street", "name": "Banaswadi Link"},
+    {"id": "e29", "from": "banaswadi", "to": "frazer_town", "distance": 5.5, "baseTime": 20, "roadType": "main_road", "name": "Cooke Town Way"},
+    
+    {"id": "e30", "from": "marathahalli", "to": "hsr_layout", "distance": 11.5, "baseTime": 35, "roadType": "highway", "name": "Outer Ring East"},
+    {"id": "e31", "from": "ulsoor", "to": "frazer_town", "distance": 3.1, "baseTime": 12, "roadType": "main_road", "name": "Assaye Road"}
+  ]
+}
