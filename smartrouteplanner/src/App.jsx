@@ -489,7 +489,7 @@ const App = () => {
                   />
                 </div>
                 {isCompareMode && (
-                  <div className="absolute bottom-6 right-6 z-10 transition-opacity">
+                  <div className="absolute bottom-6 left-6 z-[1000] transition-opacity">
                     <div className="bg-[#111110] border border-[#CAFF3C]/30 px-4 py-2 rounded-xl shadow-2xl">
                       <p className="text-[8px] font-black text-gray-500 uppercase tracking-widest mb-1">Nodes Visited</p>
                       <p className="text-sm font-mono font-bold text-[#CAFF3C]">
