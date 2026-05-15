@@ -5,7 +5,7 @@ import { AlgorithmRunner, ALGORITHMS } from './lib/algorithmRunner';
 import { TrafficSimulator } from './lib/trafficSimulator';
 import { historyService } from './lib/historyService';
 
-import MapCanvas from './components/MapCanvas';
+import RealWorldMap from './components/RealWorldMap';
 import TrafficPanel from './components/TrafficPanel';
 import ComparisonTable from './components/ComparisonTable';
 import RouteHistory from './components/RouteHistory';
@@ -479,7 +479,7 @@ const App = () => {
                   </Badge>
                 </div>
                 <div className="flex-1">
-                  <MapCanvas 
+                  <RealWorldMap 
                     graph={graph}
                     startNodeId={startNodeId}
                     endNodeId={endNodeId}

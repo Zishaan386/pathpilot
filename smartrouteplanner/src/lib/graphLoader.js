@@ -70,7 +70,8 @@ export const loadGraph = (data, width, height) => {
       ...edge,
       id: `${edge.id}_rev`,
       from: edge.to,
-      to: edge.from
+      to: edge.from,
+      waypoints: edge.waypoints ? [...edge.waypoints].reverse() : undefined
     };
     graph.addEdge(reverseEdge);
   });

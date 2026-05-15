@@ -48,7 +48,7 @@ export class GraphService {
   }
 
   /**
-   * Euclidean distance heuristic for A* and Greedy search.
+   * Geographic distance heuristic (Haversine) for A* and Greedy search.
    * @param {string} nodeId 
    * @param {string} goalId 
    * @returns {number}
@@ -58,15 +58,22 @@ export class GraphService {
     const goal = this.graph.nodes.get(goalId);
     if (!node || !goal) return 0;
 
-    // We use projected coordinates (x, y) for the heuristic to stay consistent with the canvas.
-    // However, we need to scale this to match the order of magnitude of distance/time.
-    // A simple approach is Euclidean distance.
-    const dx = node.x - goal.x;
-    const dy = node.y - goal.y;
-    
-    // Scaling factor: We need to know how many pixels equal 1km on average.
-    // For now, we'll return the raw pixel distance, but in Phase 2 we may refine this.
-    return Math.sqrt(dx * dx + dy * dy) * 0.05; // 0.05 is a rough scale factor
+    const lat1 = node.coordinates.lat;
+    const lon1 = node.coordinates.lng;
+    const lat2 = goal.coordinates.lat;
+    const lon2 = goal.coordinates.lng;
+
+    const R = 6371; // km
+    const dLat = (lat2 - lat1) * Math.PI / 180;
+    const dLon = (lon2 - lon1) * Math.PI / 180;
+    const a = 
+      Math.sin(dLat/2) * Math.sin(dLat/2) +
+      Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) * 
+      Math.sin(dLon/2) * Math.sin(dLon/2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+    const distance = R * c;
+
+    return distance; // Return km
   }
 
   updateTraffic(edgeId, multiplier) {
